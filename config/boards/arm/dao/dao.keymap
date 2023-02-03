@@ -14,7 +14,6 @@
 #define ADJ 3
 
 &lt { quick_tap_ms = <200>; };
-/* &mt { quick_tap_ms = <200>; }; */
 &mt {
   flavor = "tap-preferred";
   tapping_term_ms = <200>;
@@ -41,20 +40,23 @@
                 bindings = <&kp>, <&kp>;
             };
         };
-        keymap {
+     keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         bindings = <
-   &kp LWIN &kp GRAVE &kp Q &kp W &kp F &kp P &kp B &kp J         &kp L   &kp U     &kp Y   &kp SEMI    &kp LBKT &mt RWIN RBKT
-            &kp LCTRL &kp A &kp R &kp S &kp T &kp G &kp M         &kp N   &kp E     &kp I   &kp O &mt RCTRL SQT
-            &kp LALT  &kp X &kp C &kp D &kp V &kp Z &kp K         &kp H   &kp COMMA &kp DOT &kp FSLH &mt RALT BSLH
-                         &lt SQT TAB &mt LSHFT SPACE &lt LWR RET &lt LWR ESC &mt RSHFT BSPC &lt SQT DEL
+   &kp &none &kp MINUS &kp Q &kp W       &kp E        &kp R           &kp T              &kp Y       &kp U          &kp I       &kp O      &kp P    &kp LBKT       &mt RWIN RBKT
+             &kp EQUAL &kp A &hm LALT S  &hm LCTRL D  &hm SQT F       &kp G              &kp H       &hm SQT J      &hm RCTRL K &hm RALT L &kp SEMI &mt RCTRL SQT
+             &kp GRAVE &kp Z &kp X       &kp C        &kp V           &kp B              &kp N       &kp M          &kp COMMA   &kp DOT    &kp FSLH &mt RALT BSLH
+                                         &lt RSE TAB  &mt LSHFT SPACE &lt LWR RET        &lt LWR ESC &mt RSHFT BSPC &lt RSE DEL
                         >;
                 };
-
                 lower_layer {
                         bindings = <
+   /* &kp &none &kp MINUS &kp Q &kp W       &kp E        &kp R           &kp T              &kp Y       &kp U          &kp I       &kp O      &kp P    &kp LBKT       &mt RWIN RBKT */
+   /*           &kp EQUAL &kp A &hm LALT S  &hm LCTRL D  &hm SQT F       &kp G              &kp H       &hm SQT J      &hm RCTRL K &hm RALT L &kp SEMI &mt RCTRL SQT */
+   /*           &kp GRAVE &kp Z &kp X       &kp C        &kp V           &kp B              &kp N       &kp M          &kp COMMA   &kp DOT    &kp FSLH &mt RALT BSLH */
+   /*                                       &lt RSE TAB  &mt LSHFT SPACE &lt LWR RET        &lt LWR ESC &mt RSHFT BSPC &lt RSE DEL */
    &trans &kp UNDER      &kp F1   &kp F2 &kp F3   &kp F4   &kp F5           &kp F6    &kp F7   &kp F8   &kp F9   &kp F10  &kp F11 &mt RGUI F12
           &mt LCTRL PLUS &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &mt RCTRL MINUS
           &mt LALT EQUAL &kp N1   &kp N2 &kp N3   &kp N4   &kp N5           &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &trans
@@ -70,7 +72,6 @@
                                                            &trans &trans &lt ADJ RET   &lt ADJ ESC &trans &trans
                         >;
                 };
-
                 adjust_layer {
                         bindings = <
    &reset &bootloader  &none        &none        &none        &none        &none              &none        &none        &none        &none        &none         &bootloader &reset
