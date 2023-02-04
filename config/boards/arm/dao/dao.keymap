@@ -12,6 +12,8 @@
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+#define HYP LS(LC(LA(LGUI)))
+#define HYPER(key) LS(LC(LA(LG(key))))
 
 &lt { quick_tap_ms = <200>; };
 &mt {
@@ -45,18 +47,18 @@
 
                 default_layer {
                         bindings = <
-   &trans &kp MINUS &kp Q &kp W       &kp E        &kp R           &kp T                            &kp Y       &kp U          &kp I       &kp O      &kp P    &kp LBKT       &kp RBKT
-          &kp EQUAL &kp A &hm LALT S  &hm LCTRL D  &hm LMETA F     &kp G                            &kp H       &hm RMETA J    &hm RCTRL K &hm RALT L &kp SEMI &kp SQT
-          &kp GRAVE &kp Z &kp X       &kp C        &kp V           &kp B                            &kp N       &kp M          &kp COMMA   &kp DOT    &kp FSLH &kp BSLH
-                                      &lt LWR TAB  &mt LSHFT SPACE &lt LS(LC(LA(LMETA))) RET        &lt RSE ESC &mt RSHFT BSPC &lt LWR DEL
+   &trans &kp MINUS &kp Q &kp W       &kp E        &kp R           &kp T                &kp Y       &kp U          &kp I       &kp O      &kp P    &kp LBKT       &kp RBKT
+          &kp EQUAL &kp A &hm LALT S  &hm LCTRL D  &hm LMETA F     &kp G                &kp H       &hm RMETA J    &hm RCTRL K &hm RALT L &kp SEMI &kp SQT
+          &kp GRAVE &kp Z &kp X       &kp C        &kp V           &kp B                &kp N       &kp M          &kp COMMA   &kp DOT    &kp FSLH &kp BSLH
+                                      &lt LWR TAB  &mt LSHFT SPACE &mt HYP RET          &lt RSE ESC &mt RSHFT BSPC &lt LWR DEL
                         >;
                 };
                 lower_layer {
                         bindings = <
-   &trans &kp UNDER      &kp F1   &kp F2 &kp F3   &kp F4   &kp F5                        &kp F6      &kp F7   &kp F8   &kp F9   &kp F10  &kp F11 &mt RGUI F12
-          &mt LCTRL PLUS &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT                     &kp CARET   &kp AMPS &kp STAR &kp LPAR &kp RPAR &mt RCTRL MINUS
-          &mt LALT EQUAL &kp N1   &kp N2 &kp N3   &kp N4   &kp N5                        &kp N6      &kp N7   &kp N8   &kp N9   &kp N0   &trans
-                                         &trans   &trans   &lt LS(LC(LA(LMETA))) RET     &lt ADJ ESC &trans   &trans
+   &trans &kp UNDER      &kp F1   &kp F2 &kp F3   &kp F4   &kp F5            &kp F6      &kp F7   &kp F8   &kp F9   &kp F10  &kp F11 &mt RGUI F12
+          &mt LCTRL PLUS &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT         &kp CARET   &kp AMPS &kp STAR &kp LPAR &kp RPAR &mt RCTRL MINUS
+          &mt LALT EQUAL &kp N1   &kp N2 &kp N3   &kp N4   &kp N5            &kp N6      &kp N7   &kp N8   &kp N9   &kp N0   &trans
+                                         &trans   &trans   &mt HYP RET       &lt ADJ ESC &trans   &trans
                         >;
                 };
 
